@@ -1,0 +1,36 @@
+📱 COMO ACESSAR NO CELULAR
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SEU IP LOCAL: 192.168.18.70
+✅ PORTA: 3000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 PASSOS:
+
+1. Certifique-se que o celular está na MESMA rede Wi-Fi do PC
+
+2. Inicie o servidor com um destes métodos:
+
+   MÉTODO 1 (Fácil - Windows):
+   - Clique duas vezes em: start-mobile.bat
+   
+   MÉTODO 2 (Comando):
+   - Abra o terminal e execute:
+     npm run dev:mobile
+
+3. No celular, abra o navegador e acesse:
+
+   http://192.168.18.70:3000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ IMPORTANTE:
+
+- Celular e PC devem estar na mesma Wi-Fi
+- Se o IP mudar, execute: ipconfig (Windows) e procure "IPv4"
+- Pressione Ctrl+C no terminal para parar o servidor
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
