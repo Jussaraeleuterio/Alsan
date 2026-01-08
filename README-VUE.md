@@ -71,3 +71,4 @@ O código foi migrado mantendo:
 4. **Testing**: Adicionar testes unitários
 5. **PWA**: Transformar em Progressive Web App
 
+

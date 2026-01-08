@@ -207,3 +207,4 @@ npm run preview
 
 A migração está completa e funcional. Todas as funcionalidades do site original foram preservadas e melhoradas com a reatividade do Vue 3.
 
+

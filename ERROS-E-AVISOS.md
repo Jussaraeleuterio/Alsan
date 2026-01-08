@@ -131,3 +131,4 @@ Antes de publicar, certifique-se de:
 
 Os únicos "problemas" são recursos externos faltando (imagens) e um placeholder no link do WhatsApp, que são esperados e fáceis de corrigir.
 
+

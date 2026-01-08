@@ -70,3 +70,4 @@ Execute o script `start-mobile.bat` (Windows) ou `start-mobile.sh` (Mac/Linux) q
 
 Use uma extensão do VS Code como "Live Server" que gera QR Code automaticamente!
 
+

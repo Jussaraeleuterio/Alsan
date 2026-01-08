@@ -86,3 +86,4 @@ O site está **otimizado para mobile** com:
 - ✅ Performance otimizada
 - ✅ Acessibilidade garantida
 
+

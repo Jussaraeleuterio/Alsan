@@ -59,3 +59,4 @@ No Vite, arquivos em `public/` são servidos na raiz. Então:
 - Referência no código: `/assets/portfolio-alsan.jpg`
 - Caminho final no navegador: `http://localhost:3000/assets/portfolio-alsan.jpg`
 
+

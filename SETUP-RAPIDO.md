@@ -100,3 +100,4 @@ npm run dev
 - Documentação: https://www.emailjs.com/docs/
 - Limite gratuito: 200 e-mails/mês
 
+

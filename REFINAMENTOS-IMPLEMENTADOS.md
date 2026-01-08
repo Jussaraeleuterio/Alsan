@@ -302,3 +302,4 @@ Se quiser evoluir ainda mais:
    - Filtros na galeria
    - Animations mais complexas
 
+
