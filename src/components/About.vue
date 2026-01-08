@@ -32,12 +32,73 @@ useScrollReveal()
 <style scoped>
 .section.intro {
   background: #FAF9F6;
-  padding: 80px 24px;
+  padding: 100px 24px;
+  position: relative;
+}
+
+.section.intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(18,18,18,.1) 20%, 
+    rgba(18,18,18,.1) 80%, 
+    transparent
+  );
+}
+
+.section.intro::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(18,18,18,.1) 20%, 
+    rgba(18,18,18,.1) 80%, 
+    transparent
+  );
 }
 
 .intro-text {
   max-width: 700px;
   margin: 0 auto 48px;
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(18, 18, 18, 0.08);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.intro-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(184, 92, 56, 0.2) 20%, 
+    rgba(184, 92, 56, 0.2) 80%, 
+    transparent
+  );
+}
+
+@media (max-width: 640px) {
+  .intro-text {
+    padding: 32px 24px;
+  }
 }
 
 .intro-text p {

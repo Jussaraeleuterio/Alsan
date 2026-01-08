@@ -68,6 +68,20 @@ useScrollReveal()
   margin: 0 !important;
   padding: 0 !important;
   grid-column: none !important;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+  border-color: rgba(184, 92, 56, 0.3);
+  box-shadow: 
+    0 0 0 1px rgba(184, 92, 56, 0.2),
+    0 12px 48px rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(184, 92, 56, 0.15);
+  transform: translateY(-4px);
 }
 
 .gallery-item img {
@@ -89,10 +103,17 @@ useScrollReveal()
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 32px 24px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 40px 32px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
   color: white;
   z-index: 2;
+  border-top: 2px solid rgba(184, 92, 56, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.gallery-item:hover .gallery-overlay {
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  border-top-color: rgba(184, 92, 56, 0.5);
 }
 
 .projeto-title {

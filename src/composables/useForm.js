@@ -18,6 +18,7 @@ export function useForm() {
   const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || ''
   const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ''
   const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
+  const EMAIL_TO = import.meta.env.VITE_EMAIL_TO || 'comercial@alsanconstrucao.com.br'
   const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999'
 
   const validateField = (field, value) => {
@@ -83,6 +84,7 @@ export function useForm() {
 
       // Prepara os dados do template
       const templateParams = {
+        to_email: EMAIL_TO, // E-mail de destino (comercial@alsanconstrucao.com.br)
         nome: formData.value.nome,
         email: formData.value.email,
         whatsapp: formData.value.whatsapp,

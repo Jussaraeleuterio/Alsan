@@ -136,6 +136,53 @@ useScrollReveal()
 
 .excellence-card {
   text-align: center;
+  padding: 48px 32px;
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%),
+    rgba(26,26,26,.6);
+  border: 2px solid rgba(255,255,255,.1);
+  box-shadow: 
+    0 0 0 1px rgba(255,255,255,.05),
+    0 8px 32px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.excellence-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(184,92,56,.5) 20%, 
+    rgba(184,92,56,.5) 80%, 
+    transparent
+  );
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.excellence-card:hover {
+  transform: translateY(-6px);
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.04) 100%),
+    rgba(26,26,26,.7);
+  border-color: rgba(184,92,56,.3);
+  box-shadow: 
+    0 0 0 1px rgba(184,92,56,.2),
+    0 12px 48px rgba(0,0,0,.5),
+    0 0 24px rgba(184,92,56,.2),
+    inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+.excellence-card:hover::before {
+  opacity: 1;
 }
 
 .card-icon {
@@ -165,6 +212,54 @@ useScrollReveal()
 .automation-section {
   text-align: center;
   margin-bottom: 80px;
+  padding: 64px 40px;
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.04) 100%),
+    rgba(26,26,26,.5);
+  border: 2px solid rgba(255,255,255,.12);
+  box-shadow: 
+    0 0 0 1px rgba(255,255,255,.06),
+    0 8px 32px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(184,92,56,.4) 20%, 
+    rgba(184,92,56,.4) 80%, 
+    transparent
+  );
+}
+
+.automation-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(184,92,56,.4) 20%, 
+    rgba(184,92,56,.4) 80%, 
+    transparent
+  );
+}
+
+@media (max-width: 640px) {
+  .automation-section {
+    padding: 48px 28px;
+  }
 }
 
 .automation-icon {

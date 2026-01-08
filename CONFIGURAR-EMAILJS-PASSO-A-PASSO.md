@@ -53,6 +53,11 @@
 Novo contato do site ALSAN - Solicitação de Orçamento
 ```
 
+**To Email (E-mail de Destino):**
+```
+{{to_email}}
+```
+
 **Content (Conteúdo):**
 Cole o seguinte código HTML:
 
@@ -70,6 +75,8 @@ Cole o seguinte código HTML:
 
 <p style="color: #999; font-size: 12px;">Enviado automaticamente pelo site ALSAN</p>
 ```
+
+⚠️ **IMPORTANTE:** No campo "To Email", use `{{to_email}}` para que o e-mail seja enviado para `comercial@alsanconstrucao.com.br`
 
 3. Clique em **"Save"**
 
@@ -97,6 +104,7 @@ Cole o seguinte código HTML:
 VITE_EMAILJS_SERVICE_ID=service_abc123
 VITE_EMAILJS_TEMPLATE_ID=template_xyz789
 VITE_EMAILJS_PUBLIC_KEY=abcdefghijklmnopqrstuvwxyz
+VITE_EMAIL_TO=comercial@alsanconstrucao.com.br
 VITE_WHATSAPP_NUMBER=5511999999999
 ```
 
@@ -104,6 +112,7 @@ VITE_WHATSAPP_NUMBER=5511999999999
 - Substitua `service_abc123` pelo seu Service ID real
 - Substitua `template_xyz789` pelo seu Template ID real
 - Substitua `abcdefghijklmnopqrstuvwxyz` pela sua Public Key real
+- `VITE_EMAIL_TO` já está configurado para `comercial@alsanconstrucao.com.br` (não precisa alterar)
 - Substitua `5511999999999` pelo número do WhatsApp Business (formato: código país + DDD + número)
 
 ### Exemplo de número WhatsApp:

@@ -109,6 +109,36 @@ useScrollReveal()
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  padding: 48px 40px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(18, 18, 18, 0.08);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(184, 92, 56, 0.3) 20%, 
+    rgba(184, 92, 56, 0.3) 80%, 
+    transparent
+  );
+}
+
+@media (max-width: 640px) {
+  .contact-form {
+    padding: 36px 28px;
+  }
 }
 
 .form-group {
@@ -119,20 +149,26 @@ useScrollReveal()
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: transparent;
-  border: 3px solid #ddd; /* Moldura mais espessa */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(18, 18, 18, 0.12);
   border-radius: 0;
-  padding: 16px;
+  padding: 18px 20px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   color: #1a1a1a;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   /* Evita zoom automático no iOS */
   -webkit-appearance: none;
   appearance: none;
   /* Melhora área de toque */
-  min-height: 44px;
+  min-height: 48px;
+  position: relative;
 }
 
 .form-group input::placeholder,
@@ -143,8 +179,15 @@ useScrollReveal()
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #B85C38; /* Cor terracota no focus */
+  border-color: #B85C38;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 0 0 1px rgba(184, 92, 56, 0.2),
+    0 0 0 4px rgba(184, 92, 56, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   outline: none;
+  transform: translateY(-1px);
 }
 
 .form-group input.error,
@@ -162,33 +205,61 @@ useScrollReveal()
 
 .submit-btn {
   width: 100%;
-  padding: 16px 24px;
-  background: #B85C38; /* Cor terracota */
-  border: 1px solid #B85C38;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #B85C38 0%, #C86B3C 100%);
+  border: 2px solid rgba(184, 92, 56, 0.3);
   border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: white; /* Texto branco para contraste */
+  color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 12px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 1px rgba(184, 92, 56, 0.2),
+    0 4px 16px rgba(184, 92, 56, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   /* Touch target mínimo recomendado */
-  min-height: 48px;
+  min-height: 52px;
   /* Remove highlight azul no mobile */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
 .submit-btn:hover:not(:disabled) {
-  background: #A04D2E; /* Terracota mais escuro no hover */
-  border-color: #A04D2E;
+  background: linear-gradient(135deg, #A04D2E 0%, #B85C38 100%);
+  border-color: rgba(184, 92, 56, 0.5);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(184, 92, 56, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 0 1px rgba(184, 92, 56, 0.3),
+    0 8px 24px rgba(184, 92, 56, 0.4),
+    0 0 32px rgba(184, 92, 56, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .submit-btn:disabled {

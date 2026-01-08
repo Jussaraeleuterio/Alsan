@@ -31,6 +31,11 @@
 Novo contato do site ALSAN - Solicitação de Orçamento
 ```
 
+**To Email (E-mail de Destino):**
+```
+{{to_email}}
+```
+
 **Body (HTML):**
 ```html
 <p><strong>Novo contato recebido do site ALSAN</strong></p>
@@ -44,6 +49,8 @@ Novo contato do site ALSAN - Solicitação de Orçamento
 <hr>
 <p style="color: #999; font-size: 12px;">Enviado automaticamente pelo site ALSAN</p>
 ```
+
+⚠️ **IMPORTANTE:** No campo "To Email", use `{{to_email}}` para que o e-mail seja enviado para `comercial@alsanconstrucao.com.br`
 
 3. Anote o **Template ID** (ex: `template_xxxxx`)
 
@@ -62,6 +69,7 @@ Após configurar, adicione as variáveis no arquivo `.env`:
 VITE_EMAILJS_SERVICE_ID=service_xxxxx
 VITE_EMAILJS_TEMPLATE_ID=template_xxxxx
 VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxx
+VITE_EMAIL_TO=comercial@alsanconstrucao.com.br
 VITE_WHATSAPP_NUMBER=5511999999999
 ```
 
